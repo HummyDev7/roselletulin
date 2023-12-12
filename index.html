@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d25df3105d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="image/logo.png" width="20%" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Inspire. Explore.Enjoy.</p>
+            <h1>Greetings, visitors! <br>I'm <span>Roselle Tulin,</span>
+                <br>experience excellence on<br>My Personal Website</h1>
+        </div>
+    </div>
+</div>
+
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, I'm Roselle Tulin, a friendly and easy-to-get-along-with individual. 
+                    While my skills may not be extensive, I'm enthusiastic about learning and open to new challenges. 
+                    Connecting with people is something I value, and I believe in the power of collaboration and diverse perspectives. 
+                    If you're looking for someone who is approachable, eager to learn, and ready to grow, 
+                    I'm here and excited to explore new opportunities. Let's connect and discover together!</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Adaptability</span><br>Versatility</li>
+                        <li><span>Patience and Attentiveness</span><br>Mindfulness</li>
+                        <li><span>Decision-making</span><br>Deliberation</li>
+                        <li><span>Computer Literate</span><br>Proficient</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Financial Assistance Distribution</span><br>Allocation</li>
+                        <li><span>Encoder</span><br>Encoding</li>
+                        <li><span>Validator</span><br>Verification</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2010-2016</span><br>Pedro P. Cruz Elementary School</li>
+                        <li><span>2015-2018</span><br>Bonifacio Javier National Highschool</li>
+                        <li><span>2018-2022</span><br>STI NAMEI STA. MESA</li>
+                        <li><span>2022-Present</span><br>Rizal Technological University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+            </div>
+            <div class="work">
+                <img src="image/work2.png">
+                <div class="layer">
+                    <h3>Horror Game</h3>
+                    <p>The main character woke up in an unfamiliar place and needed to gather information in order to leave.</p>
+                    <p>*this is our groupwork*</p>
+                    <a href="image/Group4_ITC_FINAL_PROJECT.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contacts</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>roselletulin24@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>09222222222</p>
+                <div class="social-icons">
+                    <a href="http://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="image/Tulin, Roselle - Resume.docx" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Roselle Tulin <i class="fa-regular fa-heart"></i></p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+var sidemeu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+function closemenu(){
+    sidemeu.style.right = "-200px";
+}
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby2OuM1v7J79vn8RKgIRqKYA1shhnTaktWuQboMYHTBGbv4zLF-6S1nnCLR7HjRd5AO/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "MESSAGE SENT SUCCESSFULLY!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
